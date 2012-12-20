@@ -53,7 +53,7 @@
 		public static function hasRequiredDumpDBVersion() {
 			if(self::hasDumpDBInstalled()) {
 				$version = Symphony::ExtensionManager()->fetchInstalledVersion("dump_db");
-				return ($version == "1.09");
+				return ($version >= "1.09");
 			} else {
 				return false; 
 			}
