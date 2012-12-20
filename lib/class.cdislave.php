@@ -13,7 +13,7 @@
 					  `order` int(4),
 					  `author` VARCHAR(255) NOT NULL,
 					  `url` VARCHAR(255) NOT NULL,
-					  `query_hash` VARCHAR(255) NOT NULL)");
+					  `query_hash` VARCHAR(255) NOT NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8");
 				if (!file_exists(CDIROOT)) { mkdir(CDIROOT); }
 				
 				Symphony::Configuration()->set('api_key', CdiUtil::generateKey(), 'cdi');
